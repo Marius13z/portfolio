@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-body scrollbar-hide;
+}
+
+* {
+  @apply font-poppins;
+}
+
+.nav-btn {
+  @apply border border-body text-sm cursor-pointer font-medium hover:border-b-black py-1 px-2 transition-all duration-300;
+}
