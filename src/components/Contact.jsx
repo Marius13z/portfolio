@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [sentMail, setSentMail] = useState(false);
+
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -12,14 +14,7 @@ const Contact = () => {
         e.target,
         `${process.env.REACT_APP_API_KEY}`
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      .then(() => setTimeout(() => setSentMail(false), 3000));
 
     e.target.reset();
   };
@@ -50,10 +45,15 @@ const Contact = () => {
             </li>
             <li>
               <button
+                onClick={() => setSentMail(true)}
                 type="submit"
-                className="py-1 px-10 shadow-sm rounded-sm uppercase hover:bg-white transition-all duration-300 bg-form absolute bottom-4 left-[335px]"
+                className={`flex font-medium items-center py-1.5 shadow-sm left-[335px] rounded-sm uppercase hover:bg-white transition-all duration-300 bg-form absolute bottom-4
+                ${sentMail ? "px-6" : "px-10"} `}
               >
-                send
+                Sent
+                {sentMail && (
+                  <img className="h-5 pl-2" src="../../check.webp" />
+                )}
               </button>
             </li>
           </ul>
