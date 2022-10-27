@@ -1,22 +1,41 @@
 import React from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        `${process.env.REACT_APP_SERVICE_ID}`,
+        `${process.env.REACT_APP_TEMPLATE_ID}`,
+        e.target,
+        `${process.env.REACT_APP_API_KEY}`
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+
+    e.target.reset();
+  };
+
   return (
     <div className="px-60 py-20">
       <div className="bg-form w-full h-[450px] rounded-md flex justify-between ">
-        <form
-          action="mailto:marius.igret13@gmail.com"
-          method="post"
-          enctype="text/plain"
-        >
+        <form onSubmit={sendEmail}>
           <ul className="pt-16 pl-24 relative">
             <li>
               <label>Mail</label>
             </li>
             <li>
               <input
-                name="mail"
-                type="mail"
+                name="email"
+                type="email"
                 className="bg-tertiary mb-6 p-2 text-xs outline-none rounded-sm"
               />
             </li>
@@ -56,7 +75,7 @@ const Contact = () => {
           </div>
           <div className="self-start">
             <p>
-              <span className="font-semibold">Email:</span>{" "}
+              <span className="font-semibold">Gmail:</span>{" "}
               marius.igret13@gmail.com
             </p>
             <p>
