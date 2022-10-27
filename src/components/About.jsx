@@ -41,13 +41,13 @@ const About = () => {
         </div>
         <div>
           <blockquote className="w-[65ch]">
-            I started my journey in web development about a year ago, while
-            being in university, and I quickly fell in love with it. Since then
-            I kept practicing relevant skills to deliver solutions to existing
-            problems and needs. I consider myself a person who constantly seeks
-            to evolve both professionally and personally. I also like to tackle
-            challenges, to socialize and I strongly believe that only together
-            we can achieve more.
+            I consider myself a person who constantly seeks to evolve both
+            professionally and personally. I also like to tackle challenges, to
+            socialize and I strongly believe that only together we can achieve
+            more. I started my journey in web development about a year ago,
+            while being in university, and I quickly fell in love with it. Since
+            then I kept practicing relevant skills to deliver solutions to
+            existing problems and needs.
           </blockquote>
         </div>
       </div>
