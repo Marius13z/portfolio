@@ -51,6 +51,8 @@ const Project = ({ project }) => {
         </div>
 
         <a
+          target="_blank"
+          rel="noreferrer"
           className="bg-primary font-medium text-center  py-2 text-lg hover:bg-black hover:text-white transition-all duration-300 shadow-md rounded-sm"
           href={project.link}
         >

@@ -9,15 +9,21 @@ function App() {
       {/* Navbar */}
       <Navbar />
       <section>
-        <div className="items-center px-16 relative flex justify-between">
+        <div className="items-center px-4 lg:px-16 relative flex justify-between">
           <div className="">
-            <h1 className="uppercase text-2xl font-bold">Marius Igret</h1>
-            <p className="text-lg text-primary"> React Developer</p>
+            <h1 className="uppercase text-lg lg:text-2xl font-bold">
+              Marius Igret
+            </h1>
+            <p className="text-xs lg:text-lg text-primary"> React Developer</p>
           </div>
-          <img className="z-10 max-w-2xl" src="./Group 96.png" />
+          <img
+            alt="me"
+            className="z-10 max-w-sm lg:max-w-2xl"
+            src="./Group 96.png"
+          />
           <div
             onClick={() => window.scrollTo({ top: 1000, behavior: "smooth" })}
-            className="flex group space-x-4 items-center cursor-pointer"
+            className="hidden lg:flex group space-x-4 items-center cursor-pointer"
           >
             <span className="text-black text-sm">See my work</span>
             <svg

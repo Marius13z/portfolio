@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="flex pt-6  px-16 justify-between">
       <ul className="flex flex-col">
         <li>
-          <img className="h-20" src="../logo.png" />
+          <img alt="logo" className="h-20" src="../logo.png" />
         </li>
         <li className="pt-1">
           <button

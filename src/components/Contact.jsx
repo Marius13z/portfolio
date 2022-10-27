@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -52,7 +52,11 @@ const Contact = () => {
               >
                 Sent
                 {sentMail && (
-                  <img className="h-5 pl-2" src="../../check.webp" />
+                  <img
+                    alt="check button"
+                    className="h-5 pl-2"
+                    src="../../check.webp"
+                  />
                 )}
               </button>
             </li>

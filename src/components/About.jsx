@@ -27,6 +27,7 @@ const About = () => {
       </div>
 
       <a
+        rel="noreferrer"
         target="_blank"
         className="uppercase absolute bottom-[360px] self-end font-semibold px-20 py-4 text-lg bg-primary rounded-sm shadow-sm hover:bg-black hover:text-white transition-all duration-300 cursor-pointer"
         href="https://www.canva.com/design/DAFM1_Dq6TY/_cDA7Om-chOAyw9pbhQkjQ/view?website#2"
