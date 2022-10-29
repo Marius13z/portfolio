@@ -2,20 +2,20 @@ import React from "react";
 
 const Project = ({ project }) => {
   return (
-    <div className="flex items-start justify-between">
-      <ul className="relative mt-80 left-12">
-        <div className="flex absolute -top-60 -left-12 space-x-28">
-          <li>
+    <div className="flex flex-col space-y-10 lg:space-y-0 lg:flex-row items-start justify-between">
+      <ul className="relative mt-10 lg:mt-80 max-w-3xl">
+        <div className="hidden lg:flex absolute -left-12 -top-60 space-x-28">
+          <li className="max-w-[25%]">
             <img
               alt="project"
-              className="h-[450px] shadow-md rounded-sm"
+              className="w-full shadow-md rounded-sm"
               src={project.secondImage}
             />
           </li>
-          <li>
+          <li className="max-w-[25%]">
             <img
               alt="project"
-              className="h-[400px] rotate-[270deg] rounded-sm shadow-md"
+              className="w-full rotate-[270deg] rounded-sm shadow-md"
               src={project.thirdImage}
             />
           </li>
@@ -23,26 +23,26 @@ const Project = ({ project }) => {
         <li>
           <img
             alt="project"
-            className="h-[370px] shadow-md rounded-sm"
+            className="w-full shadow-md rounded-sm"
             src={project.firstImage}
           />
         </li>
       </ul>
-      <div className="flex self-center pl-12 space-y-5 flex-col">
+      <div className="w-full flex self-center lg:pl-12 space-y-8 flex-col">
         <div>
-          <h1 className="font-bold text-2xl uppercase">about</h1>
-          <blockquote className="text-sm max-w-[50ch]">
+          <h1 className="font-bold text-xl lg:text-2xl uppercase">about</h1>
+          <blockquote className="text-sm  xl:text-base ">
             {project.description}
           </blockquote>
         </div>
         <div>
-          <h1 className="font-bold text-2xl uppercase">
+          <h1 className="font-bold text-lg lg:text-2xl uppercase">
             What I used in this project
           </h1>
-          <ul className="grid grid-cols-2">
+          <ul className="grid grid-cols-2 max-w-xs">
             {project?.skills.map((skill, i) => {
               return (
-                <p key={i} className="uppercase py-2">
+                <p key={i} className="text-sm lg:text-base uppercase pt-2">
                   {skill}
                 </p>
               );

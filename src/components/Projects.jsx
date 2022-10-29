@@ -6,8 +6,8 @@ const Projects = () => {
   const projects = useProjects();
 
   return (
-    <div className="py-20 px-16 flex-col bg-split-to-right ">
-      <div className="w-full flex justify-end">
+    <div className="py-10 lg:py-20 px-8 lg:px-16 flex-col lg:bg-split-to-right ">
+      <div className="w-full lg:pb-12 flex justify-end">
         <a
           rel="noreferrer"
           target="_blank"

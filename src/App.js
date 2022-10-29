@@ -9,8 +9,8 @@ function App() {
       {/* Navbar */}
       <Navbar />
       <section>
-        <div className="items-center px-4 lg:px-16 relative flex justify-between">
-          <div className="">
+        <div className="items-center pt-14 md:pt-0 px-4 lg:px-16 relative flex justify-center lg:justify-between">
+          <div className="hidden lg:block">
             <h1 className="uppercase text-lg lg:text-2xl font-bold">
               Marius Igret
             </h1>
@@ -18,7 +18,7 @@ function App() {
           </div>
           <img
             alt="me"
-            className="z-10 max-w-sm lg:max-w-2xl"
+            className="z-10 max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl"
             src="./Group 96.png"
           />
           <div

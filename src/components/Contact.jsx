@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
+import {
+  ChatBubbleOvalLeftEllipsisIcon,
+  ChatBubbleOvalLeftIcon,
+} from "@heroicons/react/20/solid";
 
 const Contact = () => {
   const [sentMail, setSentMail] = useState(false);
@@ -20,10 +25,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="px-60 py-20">
-      <div className="bg-form w-full h-[450px] rounded-md flex justify-between ">
-        <form onSubmit={sendEmail}>
-          <ul className="pt-16 pl-24 relative">
+    <div className="px-6 md:px-32 xl:px-60 py-20">
+      <div className="bg-form  p-12 space-y-12 lg:space-y-0 lg:p-24 rounded-md flex flex-col lg:flex-row justify-between ">
+        <form className="w-full" onSubmit={sendEmail}>
+          <ul>
             <li>
               <label>Mail</label>
             </li>
@@ -31,65 +36,48 @@ const Contact = () => {
               <input
                 name="email"
                 type="email"
-                className="bg-tertiary mb-6 p-2 text-xs outline-none rounded-sm"
+                className="bg-tertiary w-[60%] lg:w-[40%]  mb-6 p-2 text-xs outline-none rounded-sm"
               />
             </li>
             <li>
               <label>Message</label>
             </li>
-            <li>
+            <li className="w-full">
               <textarea
                 name="message"
-                className="bg-tertiary w-[370px] p-2 text-xs outline-none h-40 rounded-sm"
+                className="bg-tertiary w-[80%] lg:w-[60%] p-2 text-xs outline-none h-40 rounded-sm"
               />
             </li>
             <li>
               <button
                 onClick={() => setSentMail(true)}
                 type="submit"
-                className={`flex font-medium items-center py-1.5 shadow-sm left-[335px] rounded-sm uppercase hover:bg-white transition-all duration-300 bg-form absolute bottom-4
+                className={`flex mt-4 font-medium w-[80%] justify-center lg:w-[60%] items-center py-1.5 shadow-sm rounded-sm uppercase hover:bg-white transition-all duration-300 bg-tertiary 
                 ${sentMail ? "px-6" : "px-10"} `}
               >
-                Sent
-                {sentMail && (
+                {sentMail ? "MESSAGE SENT" : "SEND MESSAGE"}
+                {sentMail ? (
                   <img
                     alt="check button"
                     className="h-5 pl-2"
                     src="../../check.webp"
                   />
+                ) : (
+                  <ChatBubbleOvalLeftEllipsisIcon className="w-5 h-5 text-black ml-2" />
                 )}
               </button>
             </li>
           </ul>
         </form>
-        <div className="flex relative flex-col items-end pr-4 pt-4 space-y-5">
-          <div className="bg-black text-white rounded-full h-8 w-8 items-center justify-center flex">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="w-4 h-4"
-            >
-              <path
-                fillRule="evenodd"
-                d="M4.804 21.644A6.707 6.707 0 006 21.75a6.721 6.721 0 003.583-1.029c.774.182 1.584.279 2.417.279 5.322 0 9.75-3.97 9.75-9 0-5.03-4.428-9-9.75-9s-9.75 3.97-9.75 9c0 2.409 1.025 4.587 2.674 6.192.232.226.277.428.254.543a3.73 3.73 0 01-.814 1.686.75.75 0 00.44 1.223zM8.25 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM10.875 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zm4.875-1.125a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z"
-                clipRule="evenodd"
-              />
-            </svg>
-          </div>
-          <div className="self-start">
-            <p>
-              <span className="font-semibold">Gmail:</span>{" "}
-              marius.igret13@gmail.com
-            </p>
-            <p>
-              <span className="font-semibold">Phone number:</span> +40 743 801
-              810
-            </p>
-          </div>
-          <p className="text-3xl -right-20 bottom-10 absolute font-bold w-[21ch]">
-            FEEL FREE TO CONTACT ME
-          </p>
+        <div className="flex flex-col space-y-4">
+          <span className="flex">
+            <EnvelopeIcon className="h-6" />
+            <span className="pl-2">marius.igret13@gmail.com</span>
+          </span>
+          <spav className="flex">
+            <PhoneIcon className="h-6" />
+            <span className="pl-2">+40 0743 801 810</span>
+          </spav>
         </div>
       </div>
     </div>
