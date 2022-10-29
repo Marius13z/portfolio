@@ -26,7 +26,7 @@ const Contact = () => {
 
   return (
     <div className="px-6 md:px-32 xl:px-60 py-20">
-      <div className="bg-form  p-12 space-y-12 lg:space-y-0 lg:p-24 rounded-md flex flex-col lg:flex-row justify-between ">
+      <div className="bg-form px-4 py-12 space-y-12 lg:space-y-0 lg:p-24 rounded-md flex flex-col lg:flex-row justify-between ">
         <form className="w-full" onSubmit={sendEmail}>
           <ul>
             <li>
@@ -36,7 +36,7 @@ const Contact = () => {
               <input
                 name="email"
                 type="email"
-                className="bg-tertiary w-[60%] lg:w-[40%]  mb-6 p-2 text-xs outline-none rounded-sm"
+                className="bg-tertiary w-[80%] sm:w-[60%] lg:w-[40%]  mb-6 p-2 text-xs outline-none rounded-sm"
               />
             </li>
             <li>
@@ -45,14 +45,14 @@ const Contact = () => {
             <li className="w-full">
               <textarea
                 name="message"
-                className="bg-tertiary w-[80%] lg:w-[60%] p-2 text-xs outline-none h-40 rounded-sm"
+                className="bg-tertiary w-[100%] sm:w-[80%] lg:w-[60%] p-2 text-xs outline-none h-40 rounded-sm"
               />
             </li>
             <li>
               <button
                 onClick={() => setSentMail(true)}
                 type="submit"
-                className={`flex mt-4 font-medium w-[80%] justify-center lg:w-[60%] items-center py-1.5 shadow-sm rounded-sm uppercase hover:bg-white transition-all duration-300 bg-tertiary 
+                className={`flex mt-4 font-medium w-[100%] sm:w-[80%] justify-center lg:w-[60%] items-center py-1.5 shadow-sm rounded-sm uppercase hover:bg-white transition-all duration-300 bg-tertiary 
                 ${sentMail ? "px-6" : "px-10"} `}
               >
                 {sentMail ? "MESSAGE SENT" : "SEND MESSAGE"}
