@@ -74,10 +74,10 @@ const Contact = () => {
             <EnvelopeIcon className="h-6" />
             <span className="pl-2">marius.igret13@gmail.com</span>
           </span>
-          <spav className="flex">
+          <span className="flex">
             <PhoneIcon className="h-6" />
             <span className="pl-2">+40 0743 801 810</span>
-          </spav>
+          </span>
         </div>
       </div>
     </div>

@@ -42,7 +42,10 @@ const Project = ({ project }) => {
           <ul className="grid grid-cols-2 max-w-xs">
             {project?.skills.map((skill, i) => {
               return (
-                <p key={i} className="text-sm lg:text-base uppercase pt-2">
+                <p
+                  key={i}
+                  className="text-xs sm:text-sm lg:text-base uppercase pt-2"
+                >
                   {skill}
                 </p>
               );

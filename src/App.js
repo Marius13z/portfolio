@@ -18,7 +18,7 @@ function App() {
           </div>
           <img
             alt="me"
-            className="z-10 max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl"
+            className="z-10 max-w-xs md:max-w-md lg:max-w-lg xl:max-w-2xl"
             src="./Group 96.png"
           />
           <div

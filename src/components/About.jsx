@@ -18,7 +18,7 @@ const About = () => {
           {skills.map((skill, i) => (
             <p
               key={i}
-              className="uppercase text-xs sm:text-sm lg:text-base text-center px-2 rounded-sm hover:text-white hover:bg-black transition-all duration-300 cursor-none shadow-sm py-2 bg-secondary mr-2 mb-2"
+              className="uppercase  text-[0.45rem] sm:text-sm lg:text-base lg:text-center px-1 rounded-sm hover:text-white hover:bg-black transition-all duration-300 cursor-none shadow-sm py-2 bg-secondary mr-2 mb-2"
             >
               {skill}
             </p>
